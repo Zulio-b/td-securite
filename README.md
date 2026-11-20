@@ -1,3 +1,24 @@
+# Réponse td :
+
+1. L'API renvoie "Impossible de charger les comptes." et les curls renvoient : 
+``` > GET /api/comptes HTTP/1.1
+> Host: localhost:8080
+> User-Agent: curl/8.23.0
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 401 
+```
+=> elle est maintenant protégée.
+
+5. On obient : 
+```
+❯ echo YWxpY2U6YWxpY2UxMjM= | base64 -d
+alice:alice123⏎
+```
+Non ce n'est pas du chiffrement on cahnge simplement de langage. 
+
+
 # Banque : sécuriser une appli de virement
 
 Une micro-appli de virement : API **Spring Boot 4** (Java 25) et front **Angular**.
